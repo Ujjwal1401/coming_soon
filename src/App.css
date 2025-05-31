@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+/* Reset margin, padding and set box-sizing globally */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Background video styling - full screen fixed behind content */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;           /* Full viewport width */
+  height: 100vh;          /* Full viewport height */
+  object-fit: cover;      /* Cover the entire area without distortion */
+  z-index: -1;            /* Behind all other elements */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Main container centered vertically and horizontally */
+.coming-soon-container {
+  height: 100vh;          /* Full viewport height */
+  width: 100%;            /* Full width (responsive) */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  color: white;           /* Text color */
+  text-align: center;     /* Center text */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Semi-transparent overlay background */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);  /* Black with opacity */
+  padding: 30px;
+  border-radius: 12px;                   /* Rounded corners */
+}
+
+/* Timer container - horizontal layout with gap */
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;               /* Space between timer units */
+  margin: 20px 0;
+}
+
+/* Individual time unit box */
+.time-box {
+  background: white;
+  color: black;
+  padding: 10px;
+  width: 70px;
+  border-radius: 8px;      /* Rounded corners */
+}
+
+/* Numeric time value style */
+.time-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Label for each time unit */
+.time-label {
+  font-size: 0.8rem;
+}
+
+/* Email input field styling */
+.email-input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* Notify button styling */
+.notify-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Logo and site name container fixed at top-left */
+.logo-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;             /* Above most content */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;          /* Pointer cursor on hover */
+  transition: transform 0.3s ease;  /* Smooth scale transition */
+}
+
+/* Scale logo and text slightly on hover */
+.logo-wrapper:hover {
+  transform: scale(1.1);
+}
+
+/* Logo image styling */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;      /* Circular shape */
+  object-fit: cover;       /* Maintain aspect ratio and fill */
+}
+
+/* Site name text styling */
+.site-name {
   color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  /* Timer wraps to next line and reduces gap */
+  .timer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Slightly larger padding in time boxes */
+  .time-box {
+    flex: 0 0 auto;
+    width: 70px;
+    padding: 15px;
+  }
+
+  /* Add side padding to main container */
+  .coming-soon-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Add side padding to overlay */
+  .overlay {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

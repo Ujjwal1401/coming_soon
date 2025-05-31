@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# V COMING-SOON
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based "Coming Soon" landing page with countdown timer, background video, and email notification input.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Countdown timer to a specific launch date
+- Background video loop
+- Responsive design for desktop and mobile
+- Logo and site name fixed at top-left
+- Email input placeholder for notifications
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
+ COMING-SOON/
+│
+├── public/
+│ ├── background.mp4 # Background video
+│ ├── favicon.ico
+│ ├── index.html
+│ └── logo.png # Logo image
+│
+├── src/
+│ ├── App.js # Main React app entry
+│ ├── ComingSoon.js # Coming Soon component
+│ ├── App.css # Styles for the app
+│ ├── index.js # ReactDOM rendering
+│ └── ...other files
+│
+├── package.json
+├── .gitignore
+└── README.md
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Make sure you have [Node.js](https://nodejs.org/) and npm installed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/yourusername/V-COMING-SOON.git
+cd V-COMING-SOON
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install dependencies:
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Running the App Locally
+Start the development server:
+npm start
+Open your browser at http://localhost:3000 to see the Coming Soon page.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Customization
+Change the target launch date inside src/ComingSoon.js:
+// Set the exact date and time for the countdown target
+const [targetDate] = useState(() => new Date('2025-06-15T00:00:00'));
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+// Or set date and time relative to current date/time like:
+// const [targetDate] = useState(() => {
+//   const now = new Date();
+//   now.setDate(now.getDate() + 3); // Set target date 3 days from now
+//   now.setHours(now.getHours() + 5); // Add 5 hours to the target time
+//   return now;
+// });
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Replace public/background.mp4 and public/logo.png with your own assets.
