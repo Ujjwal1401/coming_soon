@@ -17,21 +17,37 @@ A React-based "Coming Soon" landing page with countdown timer, background video,
 ## Project Structure
  COMING-SOON/
 │
+
 ├── public/
+
 │ ├── background.mp4 # Background video
+
 │ ├── favicon.ico
+
 │ ├── index.html
+
 │ └── logo.png # Logo image
+
 │
+
 ├── src/
+
 │ ├── App.js # Main React app entry
+
 │ ├── ComingSoon.js # Coming Soon component
+
 │ ├── App.css # Styles for the app
+
 │ ├── index.js # ReactDOM rendering
+
 │ └── ...other files
+
 │
+
 ├── package.json
+
 ├── .gitignore
+
 └── README.md
 
 
