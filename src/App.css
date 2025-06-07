@@ -1,6 +1,6 @@
 /* Reset margin, padding and set box-sizing globally */
 * {
-  margin: 1;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
