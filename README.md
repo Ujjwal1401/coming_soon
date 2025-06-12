@@ -1,6 +1,6 @@
 # COMING-SOON-PAGE
 
-A React-based "Coming Soon" landing page with countdown timer, background video, and email notification input.
+A React-based "Coming Soon" landing page with countdown timer, background video and email notification input.
 
 ---
 
